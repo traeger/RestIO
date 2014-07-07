@@ -1,3 +1,13 @@
+-----------------------------------------------------------------------------
+-- |
+-- Copyright   :  (c) 2014 Marco Traeger (marco.traeger@googlemail.com)
+-- License     :  MIT License (see http://opensource.org/licenses/MIT)
+--
+-- Maintainer  :  marco.traeger@googlemail.com 
+-- Stability   :  dev
+--
+-----------------------------------------------------------------------------
+
 --{-# LANGUAGE OverloadedStrings #-}
 --import Web.Scotty
 
