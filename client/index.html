@@ -1,0 +1,61 @@
+<html>
+	<head>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link href="css/bootstrap.min.css" rel="stylesheet">
+			<script src="js/jquery-2.1.1.min.js"></script>
+			<title>RestIO</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="page-header">
+				<h1>RestIO <small>Standard IO via a Restful Interface</small></h1>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="console">
+						<ul class="list-group" id="stdout">
+						</ul>
+					</div>
+				</div><!-- /.col -->
+			</div><!-- /.row -->
+			<div class="row">
+				<div class="col-lg-12">
+					<form id="stdin">
+						<div class="input-group">
+							<input id="stdin_command" type="text" class="form-control" placeholder="command me.. ">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="submit">Go!</button>
+							</span>
+						</div><!-- /input-group -->
+					</form>
+				</div><!-- /.col -->
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+		<script>
+$(function() {
+	var stdout = function(x) {
+		$('#stdout').append('<li class="list-group-item">'+x+'</li>')
+	}
+	var stdin = function() {
+		var v = $('#stdin_command').val()
+		$('#stdin_command').val('')
+		//console.log(v)
+		$.ajax({
+			type: "POST",
+			url: "http://localhost:3000/stdin",
+			data: v,
+			success: function(data) {
+				stdout(data)
+			}
+		})
+	}
+	$('#stdin').submit(function(event) {
+		event.preventDefault()
+		stdin();
+	})
+	
+	//stdout('Test');
+})
+		</script>
+	</body>
+</html>
