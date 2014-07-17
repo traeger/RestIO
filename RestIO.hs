@@ -66,6 +66,7 @@ app buffer (pin, pout, perr) = mapUrls $
   <|> mount "stdin" (stdinApp pin)
   <|> mount "stdout" (stdoutApp buffer)
   <|> mount "client" (fileApp)
+  <|> mountRoot (clientApp)
 
 -- | Echo Service
 echoApp :: Application
@@ -75,6 +76,10 @@ echoApp request respond = respond $
     putStrLn $ "echo: " ++ (Char8.unpack text)
     write $ Blaze.fromByteString text
     flush
+    
+clientApp :: Application
+clientApp request respond = respond $
+  responseFile status200 [] ("client/index.html") Nothing
     
 -- | Serves files in the client subdirectory
 fileApp :: Application
