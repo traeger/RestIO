@@ -1,7 +1,7 @@
 RestIO
 ======
 
-Standard IO via a Restful Interface
+Standard IO via a Restful Interface using the fast Http-Server Warp
 
 Use
 ------
