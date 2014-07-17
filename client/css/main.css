@@ -1,0 +1,47 @@
+/* bootstrap fix */
+.btn .glyphicon {
+  margin: 3px;
+}
+.input-group-btn .btn {
+  border-radius: 0;
+}
+/* end bootstrap fix */
+
+.console .list-group {
+  margin-bottom: 0;
+  border-style: solid;
+  border-color: #ccc;
+  border-width: 1px 1px 0 1px;
+  border-radius: 4px 4px 0 0;
+  padding: 10px 0 5px 0;
+  min-height: 100px;
+}
+.console .list-group-item {
+  padding: 0 15px;
+  border: none;
+}
+.console .input-group * {
+}
+.console .input-group .form-control:first-child,
+.console .input-group .input-group-addon:first-child,
+.console .input-group-btn:first-child>.btn{
+  border-radius: 0 0 0 4px;
+}
+.console .input-group .form-control:last-child,
+.console .input-group .input-group-addon:last-child,
+.console .input-group-btn:last-child>.btn{
+  border-radius: 0 0 4px 0;
+}
+.console .console-marker {
+  padding: 0 0 0 15px;
+  background-color: inherit;
+}
+.console .console-input {
+  border-width: 1px 0 1px 0;
+  padding: 6px 8px;
+}
+.console .console-input:focus {
+  border-color: #ccc;
+  box-shadow: none;
+  outline: 0 none;
+}

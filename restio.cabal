@@ -1,0 +1,20 @@
+Name:           RestIO
+Version:        0.0
+Cabal-Version:  >= 1.2
+License:        MIT
+Author:         Marco Traeger
+Synopsis:       RestIO
+Build-Type:     Simple
+
+Library
+  Build-Depends:
+    base, array,
+    stm, process, cmdargs >= 0.3,
+    containers >= 0.5,
+    bytestring, blaze-builder,
+    http-types, 
+    warp >= 3, wai, wai-extra
+
+Executable RestIO
+  Main-Is:        Main.hs
+  GHC-Options: -threaded
