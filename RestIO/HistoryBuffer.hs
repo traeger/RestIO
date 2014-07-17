@@ -8,6 +8,7 @@
 -- Stability   :  experimental
 --
 -- A STM-based thread-save queue-like buffer with history access for readers.
+-- The storage of the buffer is implemented using a simple ring buffer.
 --
 -----------------------------------------------------------------------------
 
