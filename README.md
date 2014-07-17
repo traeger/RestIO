@@ -1,7 +1,8 @@
 RestIO
 ======
 
-[Standard IO](http://en.wikipedia.org/wiki/Standard_streams) via a Restful Interface using the [fast Http-Server Warp](https://hackage.haskell.org/package/warp)
+<a href="http://en.wikipedia.org/wiki/Standard_streams" target="_blank">Standard IO</a>
+via a Restful Interface using the <a href="https://hackage.haskell.org/package/warp" target="_blank">fast Http-Server Warp</a>
 
 Use
 ------
