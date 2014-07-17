@@ -14,6 +14,11 @@ Use
 
 open `http://localhost:3000/client/index.html` in a browser of your choice, enjoy.
 
+a list of optional parameters is avaliable via
+```
+./RestIO --help
+```
+
 ###### windows
 
 ```
@@ -21,6 +26,11 @@ RestIO.exe AnyInteractiveProgramName
 ```
 
 open `http://localhost:3000/client/index.html` in a browser of your choice, enjoy.
+
+a list of optional parameters is avaliable via
+```
+RestIO.exe --help
+```
 
 Install
 ------
