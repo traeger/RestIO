@@ -19,9 +19,9 @@ data Parameters = Parameters {cmd :: String, buffersize :: Int, port :: Int} der
 
 parameters = cmdArgsMode $ Parameters
     {cmd = ""  &= argPos 0 &= typ "CMD"
-    ,buffersize = 50 &= name "b" &= help "Buffersize for the stdout of the Process."
+    ,buffersize = 50 &= name "b" &= help "Buffersize (in lines) for the stdout of the Process."
     ,port = 3000 &= name "p" &= help "Port where the Restservice is accessable."}
-    &= summary "Standard IO via a Restful Interface. Runs the Command CMD and forwards all IO to the Restful Interface. Accessable via [host:port]/client/index.html"
+    &= summary "Standard IO via a Restful Interface. Runs the Command CMD and forwards all IO using the Restful Interface. Accessable via [host:port]/client/index.html"
 
 main :: IO()
 main = do
