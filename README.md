@@ -3,7 +3,7 @@ RestIO
 
 Standard IO via a Restful Interface
 
-use
+Use
 ------
 
 ###### linux / macos
@@ -22,7 +22,7 @@ RestIO.exe AnyInteractiveProgramName
 
 open `http://localhost:3000/client/index.html` in a browser of your choice, enjoy.
 
-install
+Install
 ------
 
 ###### linux / macos
